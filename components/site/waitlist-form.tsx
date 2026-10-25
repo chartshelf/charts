@@ -49,7 +49,7 @@ export function WaitlistForm() {
       </fieldset>
       <p className="text-sm text-pretty text-muted-foreground">
         {action
-          ? "One email when the pack is ready, with the $59 waitlist price. No spam."
+          ? "One email at launch, with the $59 price. No spam."
           : "The waitlist opens soon."}
       </p>
     </form>
