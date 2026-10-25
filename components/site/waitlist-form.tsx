@@ -6,7 +6,8 @@ import { PAID_CHARTS } from "./paid-previews"
 /**
  * A plain HTML form that posts to an email tool. Set WAITLIST_FORM_ACTION to the
  * Buttondown embed URL: https://buttondown.com/api/emails/embed-subscribe/<username>
- * Buttondown saves the chosen chart as a tag on the subscriber.
+ * The chart choice goes to the Buttondown custom field `chart` (Settings > Subscribing).
+ * Its choice values must match the ids in PAID_CHARTS.
  */
 export function WaitlistForm() {
   const action = process.env.WAITLIST_FORM_ACTION
@@ -21,7 +22,7 @@ export function WaitlistForm() {
               key={id}
               className="flex cursor-pointer items-center gap-2 rounded-lg border px-3 py-2 text-sm has-checked:border-ring has-checked:bg-muted/60"
             >
-              <input type="radio" name="tag" value={id} defaultChecked={i === 0} className="accent-brand" />
+              <input type="radio" name="metadata__chart" value={id} defaultChecked={i === 0} className="accent-brand" />
               {name}
             </label>
           ))}
