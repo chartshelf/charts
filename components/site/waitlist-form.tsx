@@ -46,7 +46,7 @@ export function WaitlistForm() {
           </Button>
         </div>
       </fieldset>
-      <p className="text-sm text-muted-foreground">
+      <p className="text-sm text-pretty text-muted-foreground">
         {action
           ? "One email when the pack is ready, with the $59 waitlist price. No spam."
           : "The waitlist opens soon."}
